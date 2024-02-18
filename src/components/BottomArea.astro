@@ -1,0 +1,59 @@
+---
+import Pages from "../scripts/PageLayout";
+import LinkButton from "../components/LinkButton.astro";
+---
+
+<div class="bottomAreaContainer">
+  <ul class="listContainer">
+    <p class="titleItem">Pages</p>
+    {
+      Pages[0].map((page) => {
+        return <LinkButton link={page[1]} text={page[0]} />;
+      })
+    }
+    {
+      Pages[1].map((page) => {
+        return <LinkButton link={page[1]} text={page[0]} />;
+      })
+    }
+  </ul>
+  <div class="listContainer">
+    <p class="titleItem">Sample title</p>
+    <p>we could put some extra stuff here probably</p>
+  </div>
+</div>
+
+<style>
+  .bottomAreaContainer {
+    background-color: rgb(24, 24, 24);
+    color: white;
+    width: 80%;
+    padding: 10%;
+    margin-top: -3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: -45;
+    flex-direction: row;
+    height: max-content;
+  }
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Work Sans Variable", sans-serif;
+  }
+  .listContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .titleItem {
+    font-weight: 600;
+  }
+</style>

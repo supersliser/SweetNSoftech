@@ -1,14 +1,7 @@
 ---
 import LinkButton from "../components/LinkButton.astro";
 const { currentPage } = Astro.props;
-const Pages = [
-  [
-    ["Home", "/"],
-    ["Meet the Team", "/team"],
-    ["About Us", "/about"],
-  ],
-  [["Contact Us", "/contact"]],
-];
+import Pages from "../scripts/PageLayout.js";
 ---
 
 <nav class="barContainer">
