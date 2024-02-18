@@ -7,64 +7,65 @@ const Pages = [[["Home", "/"],["Meet the Team", "/team"],["About Us", "/about"],
 
 <nav class="barContainer">
     <div class="leftBarContainer">
-        <div class="itemContainer">
-            {
-            Pages[0].map((page) => {
-                page[0] == currentPage ?
-                (<LinkButton link={page[1]}>{page[0]}</LinkButton>) :
-                (<LinkButton bold={true} link={page[1]}>{page[0]}</LinkButton>)})}
-        </div>
+        {
+            Pages[0].map((page) => {return (
+                <div class="itemContainer">
+                    {page[0] != currentPage ?
+                    (<LinkButton bold={false} link={page[1]} text={page[0]} />) :
+                    (<LinkButton bold={true} link={page[1]} text={page[0]} />)}
+                </div>
+            )})
+        }
     </div>
     <div class="rightBarContainer">
-        <div class="itemContainer">
-            {
-                Pages[1].map((page) => {
-                page[0] == currentPage ?
-                (<LinkButton link={page[1]} size="1rem">{page[0]}</LinkButton>) :
-                (<LinkButton bold={true} link={page[1]} size="1rem">{page[0]}</LinkButton>)})
-            }
-        </div>
+        {
+            Pages[1].map((page) => {return (
+                <div class="itemContainer">
+                    {page[0] != currentPage ?
+                    (<LinkButton bold={false} link={page[1]} text={page[0]} />) :
+                    (<LinkButton bold={true} link={page[1]} text={page[0]} />)}
+                </div>
+            )})
+        }
     </div>
 </nav>
 
 <style>
-  .barContainer {
-    position: static;
-    min-height: 20%;
-    width: 100%;
-    background-color: green;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0px 17px 32px -17px #000000;
-    display: grid;
-    grid-template-columns: 70% 30%;
-    grid-template-rows: 100%;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-  }
+    .barContainer {
+        position: static;
+        min-height: 20%;
+        width: 100%;
+        background-color: transparent;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0px 17px 32px -17px #000000;
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-template-rows: 100%;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
 
-  .leftBarContainer {
-    background-color: inherit;
-    grid-column-start: 1;
-    grid-column-end: 1;
+    .leftBarContainer {
+        background-color: inherit;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
 
-    display: flex;
-    align-items: center;
-    justify-content: start;
-  }
+    .rightBarContainer {
+        background-color: inherit;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
 
-  .rightBarContainer {
-    background-color: inherit;
-    grid-column-start: 2;
-    grid-column-end: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: end;
-  }
-
-  .itemContainer {
-    background-color: inherit;
-    margin-left: 5%;
-  }
+    .itemContainer {
+        background-color: inherit;
+        margin-left: 5%;
+    }
 </style>
