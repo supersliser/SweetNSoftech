@@ -1,22 +1,33 @@
 ---
-const { link, bold, text } = Astro.props;
-var boldText = "normal";
+import colourScheme from "../scripts/Pallete";
+import "@fontsource-variable/lexend";
+
+const { link, bold, text, dark } = Astro.props;
+var boldText = "500";
 if (bold) {
-  boldText = "bold";
+  boldText = "900";
+}
+var colour;
+if (dark == null || !dark) {
+  colour = "#000000";
+} else {
+  colour = colourScheme[0][0];
 }
 ---
 
-<button class="linkButton" onclick={link}>{text}</button>
+<a class="linkButton" href={link}>{text}</a>
 
-<style define:vars={{ boldText }}>
+<style define:vars={{ boldText, colour }}>
   .linkButton {
-    color: white;
+    color: var(--colour);
+    font-family: "Lexend Variable", sans-serif;
     font-weight: var(--boldText);
     padding: 10px;
     border-radius: 10px;
     background-color: transparent;
     font-size: 1rem;
     border-width: 0;
+    text-decoration: none;
   }
 
   .linkButton:hover {

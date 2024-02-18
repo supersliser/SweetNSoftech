@@ -4,19 +4,19 @@ var BackgroundGradiants = "";
 
 const colourScheme = [
   "rgba(235, 64, 52, 1)",
-  "rgba(17, 5, 247, 1)",
+  "rgba(85, 93, 194, 1)",
   "rgba(247, 200, 99, 1)",
   "rgba(252, 38, 252, 1)",
-  "rgba(105, 255, 242, 1)",
+  "rgba(0, 163, 166, 1)",
 ];
 
-for (var j = 0; j < 20; j++) {
+for (var j = 0; j < 50; j++) {
   BackgroundGradiants +=
     "radial-gradient(circle at " +
     Math.floor(Math.random() * 150 - 50).toString() +
     "% " +
     Math.floor(Math.random() * 150 - 50).toString() +
-    "%, rgba(0,0,0,0) 50%, " +
+    "%, rgba(0,0,0,0) 70%, " +
     colourScheme[Math.floor(Math.random() * 5)] +
     " 80%),";
 }
@@ -26,14 +26,14 @@ BackgroundGradiants = BackgroundGradiants.substring(
 );
 
 const animStart =
-  Math.floor(Math.random() * 100).toString() +
+  Math.floor(Math.random() * 200).toString() +
   "% " +
-  Math.floor(Math.random() * 100).toString() +
+  Math.floor(Math.random() * 10).toString() +
   "%";
 const animEnd =
-  Math.floor(Math.random() * 100).toString() +
+  Math.floor(Math.random() * 200).toString() +
   "% " +
-  Math.floor(Math.random() * 100).toString() +
+  Math.floor(Math.random() * 10).toString() +
   "%";
 ---
 

@@ -8,12 +8,12 @@ import LinkButton from "../components/LinkButton.astro";
     <p class="titleItem">Pages</p>
     {
       Pages[0].map((page) => {
-        return <LinkButton link={page[1]} text={page[0]} />;
+        return <LinkButton dark={true} link={page[1]} text={page[0]} />;
       })
     }
     {
       Pages[1].map((page) => {
-        return <LinkButton link={page[1]} text={page[0]} />;
+        return <LinkButton dark={true} link={page[1]} text={page[0]} />;
       })
     }
   </ul>
