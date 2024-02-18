@@ -1,0 +1,90 @@
+---
+import LinkButton from "../components/LinkButton.astro";
+const { currentPage } = Astro.props;
+const Pages = [
+  [
+    ["Home", "/"],
+    ["Meet the Team", "/team"],
+    ["About Us", "/about"],
+  ],
+  [["Contact Us", "/contact"]],
+];
+---
+
+<nav class="barContainer">
+  <div class="leftBarContainer">
+    <div class="itemContainer">
+      {
+        Pages[0].map((page) => {
+          page[0] == currentPage ? (
+            <LinkButton link={page[1]}>
+              {page[0]}
+            </LinkButton>
+          ) : (
+            <LinkButton bold={true} link={page[1]}>
+              {page[0]}
+            </LinkButton>
+          );
+        })
+      }
+    </div>
+  </div>
+  <div class="rightBarContainer">
+    <div class="itemContainer">
+      {
+        Pages[1].map((page) => {
+          page[0] == currentPage ? (
+            <LinkButton link={page[1]} size="1rem">
+              {page[0]}
+            </LinkButton>
+          ) : (
+            <LinkButton bold={true} link={page[1]} size="1rem">
+              {page[0]}
+            </LinkButton>
+          );
+        })
+      }
+    </div>
+  </div>
+</nav>
+
+<style>
+  .barContainer {
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 17px 32px -17px #000000;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 100%;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .leftBarContainer {
+    background-color: inherit;
+    grid-column-start: 1;
+    grid-column-end: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .rightBarContainer {
+    background-color: inherit;
+    grid-column-start: 2;
+    grid-column-end: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .itemContainer {
+    background-color: inherit;
+    margin-left: 5%;
+  }
+</style>

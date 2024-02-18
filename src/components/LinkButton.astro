@@ -1,0 +1,39 @@
+---
+const {link, bold} = Astro.props
+var boldText = "normal"
+if (bold) {
+    boldText = "bold"
+}
+---
+
+<button onclick={link}><slot /></button>
+
+<style define:vars={{ boldText }}>
+    @keyframes Hover {
+        0% {
+            background-color: transparent;
+        }
+
+        100% {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    .linkButton  {
+        font-weight: var(--boldText);
+        padding: 10px;
+        border-radius: 5px;
+        background-color: transparent;
+        font-size: 1rem;
+        animation-name: hover;
+        animation-duration: 1s;
+        animation-direction: reverse;
+    }
+
+    .linkButton:hover {
+        animation-name: hover;
+        animation-duration: 1s;
+    }
+
+
+</style>

@@ -4,19 +4,23 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import Title from "../components/Title.astro"
+import Navbar from "../components/Navbar.astro"
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
+		<Navbar currentPage={title}></Navbar>
+		<Title>{title}</Title>
 		<slot />
 	</body>
 </html>
@@ -34,7 +38,6 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
 		background-size: 224px;
 	}
 	code {

@@ -1,0 +1,23 @@
+---
+import '@fontsource/lato/100-italic.css';
+import '@fontsource/lato/300-italic.css';
+import '@fontsource/lato/400-italic.css';
+import '@fontsource/lato/700-italic.css';
+import '@fontsource/lato/900-italic.css';
+---
+
+<div class="titleContainer"><h1 class="title"><slot /></h1></div>
+
+<style>
+    .titleContainer {
+        width: 40%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .title {
+        width:100%;
+        font-family: 'Lato', sans-serif;
+        color: rgb(0, 3, 17)
+    }
+</style>
