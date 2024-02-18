@@ -12,13 +12,15 @@ const colourScheme = [
 
 for (var j = 0; j < 50; j++) {
   BackgroundGradiants +=
-    "radial-gradient(circle at " +
+    "radial-gradient($center: " +
     Math.floor(Math.random() * 150 - 50).toString() +
     "% " +
     Math.floor(Math.random() * 150 - 50).toString() +
-    "%, rgba(0,0,0,0) 70%, " +
+    "%, $size: " +
+    Math.floor(Math.random() * 400).toString() +
+    "px, $start-color: rgba(0,0,0,0), $end-color: " +
     colourScheme[Math.floor(Math.random() * 5)] +
-    " 80%),";
+    "),";
 }
 BackgroundGradiants = BackgroundGradiants.substring(
   0,
