@@ -1,6 +1,14 @@
 ---
-import colourScheme from "../scripts/Pallete";
+// import colourScheme from "../scripts/Pallete";
 var BackgroundGradiants = "";
+
+const colourScheme = [
+  "rgba(235, 64, 52, 1)",
+  "rgba(17, 5, 247, 1)",
+  "rgba(247, 200, 99, 1)",
+  "rgba(252, 38, 252, 1)",
+  "rgba(105, 255, 242, 1)",
+];
 
 for (var j = 0; j < 20; j++) {
   BackgroundGradiants +=
@@ -9,7 +17,7 @@ for (var j = 0; j < 20; j++) {
     "% " +
     Math.floor(Math.random() * 150 - 50).toString() +
     "%, rgba(0,0,0,0) 50%, " +
-    colourScheme[Math.floor(Math.random() * 5)][0] +
+    colourScheme[Math.floor(Math.random() * 5)] +
     " 80%),";
 }
 BackgroundGradiants = BackgroundGradiants.substring(
@@ -18,14 +26,14 @@ BackgroundGradiants = BackgroundGradiants.substring(
 );
 
 const animStart =
-  Math.floor(Math.random() * 10).toString() +
+  Math.floor(Math.random() * 100).toString() +
   "% " +
-  Math.floor(Math.random() * 10).toString() +
+  Math.floor(Math.random() * 100).toString() +
   "%";
 const animEnd =
-  Math.floor(Math.random() * 50 + 50).toString() +
+  Math.floor(Math.random() * 100).toString() +
   "% " +
-  Math.floor(Math.random() * 50 + 50).toString() +
+  Math.floor(Math.random() * 100).toString() +
   "%";
 ---
 
@@ -53,6 +61,5 @@ const animEnd =
     background-color: white;
     /* background-color: white; */
     background-size: 200vw 200vh;
-    min-height: 100vh;
   }
 </style>

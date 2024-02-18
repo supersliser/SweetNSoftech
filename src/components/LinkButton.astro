@@ -1,29 +1,26 @@
 ---
-const {link, bold, text} = Astro.props
-var boldText = "normal"
+const { link, bold, text } = Astro.props;
+var boldText = "normal";
 if (bold) {
-    boldText = "bold"
+  boldText = "bold";
 }
 ---
 
 <button class="linkButton" onclick={link}>{text}</button>
 
 <style define:vars={{ boldText }}>
+  .linkButton {
+    color: white;
+    font-weight: var(--boldText);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 1rem;
+    border-width: 0;
+  }
 
-    .linkButton  {
-        color: black;
-        font-weight: var(--boldText);
-        padding: 10px;
-        border-radius: 10px;
-        background-color: transparent;
-        font-size: 1rem;
-        border-width: 0;
-    }
-
-    .linkButton:hover {
-        background-color: rgba(0, 0, 0, 0.3);
-        box-shadow: 0px 17px 32px -17px #000000;
-    }
-
-
+  .linkButton:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 17px 32px -17px #000000;
+  }
 </style>

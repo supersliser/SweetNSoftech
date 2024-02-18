@@ -1,0 +1,25 @@
+---
+import colourScheme from "../scripts/Pallete";
+const periwinkle = colourScheme[1][0];
+---
+
+<div class="mainAreaContainer">
+  <slot />
+</div>
+
+<style define:vars={{ periwinkle }}>
+  .mainAreaContainer {
+    width: 90%;
+    border-width: 5px;
+    border-color: white;
+    border-radius: 20px;
+    background-color: var(--periwinkle);
+    opacity: 0.8;
+    margin-top: 5%;
+    padding: 5%;
+    /* padding-top: 10%; */
+    box-shadow: 0px -6px 43px 0px #000000;
+    z-index: -40;
+    min-height: 100vh;
+  }
+</style>

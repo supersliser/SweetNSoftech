@@ -7,6 +7,7 @@ const { title } = Astro.props;
 import Title from "../components/Title.astro";
 import Navbar from "../components/Navbar.astro";
 import BackgroundAnim from "../components/BackgroundAnim.astro";
+import MainArea from "../components/MainArea.astro";
 ---
 
 <!doctype html>
@@ -22,8 +23,10 @@ import BackgroundAnim from "../components/BackgroundAnim.astro";
   <body>
     <BackgroundAnim>
       <Navbar currentPage={title} />
-      <Title>{title}</Title>
-      <slot />
+      <MainArea>
+        <Title>{title}</Title>
+        <slot />
+      </MainArea>
     </BackgroundAnim>
   </body>
 </html>
