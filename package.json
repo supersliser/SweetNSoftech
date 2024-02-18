@@ -10,7 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^3.0.10",
     "@fontsource/lato": "^5.0.18",
-    "astro": "^4.4.0"
+    "@types/react": "^18.2.56",
+    "@types/react-dom": "^18.2.19",
+    "astro": "^4.4.0",
+    "granim": "^2.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

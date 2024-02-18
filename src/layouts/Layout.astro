@@ -1,29 +1,37 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
-import Title from "../components/Title.astro"
+import Title from "../components/Title.astro";
 import Navbar from "../components/Navbar.astro";
+import BackgroundAnim from "../components/BackgroundAnim.astro";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<Navbar currentPage={title}></Navbar>
-		<Title>{title}</Title>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <BackgroundAnim>
+      <Navbar currentPage={title} />
+      <Title>{title}</Title>
+      <slot />
+    </BackgroundAnim>
+  </body>
 </html>
-<style is:global>
 
+<style>
+  body {
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+  }
 </style>
