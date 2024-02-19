@@ -29,12 +29,12 @@ BackgroundGradiants = BackgroundGradiants.substring(
 const animStart =
   Math.floor(Math.random() * 100).toString() +
   "% " +
-  Math.floor(Math.random() * 10).toString() +
+  Math.floor(Math.random() * 50 + 25).toString() +
   "%";
 const animEnd =
   Math.floor(Math.random() * 100).toString() +
   "% " +
-  Math.floor(Math.random() * 10).toString() +
+  Math.floor(Math.random() * 50 + 25).toString() +
   "%";
 ---
 
@@ -63,6 +63,6 @@ const animEnd =
     background: var(--BackgroundGradiants);
     background-color: white;
     /* background-color: white; */
-    background-size: 200vw 200vh;
+    background-size: 150vw 150vh;
   }
 </style>

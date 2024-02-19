@@ -1,22 +1,132 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Title from "../components/Title.astro";
+import TextBlockBlack from "../components/TextBlockBlack.astro";
+import colourScheme from "../scripts/Pallete";
+
+var powderblue = colourScheme[0][2];
+import "@fontsource/lato";
 ---
 
 <Layout title="Home">
   <main>
-    <p>this is all filler text to test something being made</p>
-    <h2>wowie</h2>
+    <Title>SweetNSoft Tech</Title>
+    <TextBlockBlack>
+      <h3>Redefining Artificial Intelligence</h3>
+      <p>
+        At <span class="highlightTwo">SweetNSoftech</span>, we are the visionary
+        creators behind <span class="highlightOne">PounceAI</span>, a
+        groundbreaking project that redefines the landscape of <span
+          class="highlightThree">artificial intelligence</span
+        >. Our mission is to develop AI systems that not only possess advanced
+        capabilities but also embody <span class="highlightFour">empathy</span>, <span
+          class="highlightFive">compassion</span
+        >, and <span class="highlightSix">ethical principles</span>.
+      </p>
+    </TextBlockBlack>
+    <h1>
+      Discover the innovative features and capabilities of <span
+        class="highlightOne">PounceAI:</span
+      >
+    </h1>
+    <h2>Sentient Intelligence</h2>
+    <div class="horizontalFloater">
+      <p>
+        Artificial intelligence like never before with <span
+          class="highlightOne">PounceAI's</span
+        > sentient intelligence, which allows it to understand and respond to human
+        emotions.
+      </p>
+      <!-- <img
+        src="https://cdn.sanity.io/images/24m087kj/draft/2fd1487d7c26e5b9c9a10a90b985348d24dd711f-600x320.gif?w=640"
+      /> -->
+    </div>
+    <h2>Continuous Improvement</h2>
+    <div class="horizontalFloater">
+      <p>
+        Through ongoing feedback and iterative learning cycles, a <span
+          class="highlightOne">PounceAI</span
+        >
+        entity strives to enhance its performance and stay at the forefront of artificial
+        intelligence innovation.
+      </p>
+      <!-- <img
+        src="https://media.licdn.com/dms/image/D4E12AQH-B-3PsUL8wQ/article-cover_image-shrink_423_752/0/1685471041451?e=1714003200&v=beta&t=PTwKbSNgK1OVcwsZjXitKYu-uI67tn27ZphMkgWpK-Q"
+      /> -->
+    </div>
   </main>
 </Layout>
 
-<style>
+<style define:vars={powderblue}>
   p,
   h1,
-  h2,
-  h3,
   h4,
   h5,
   h6 {
     font-family: "Work Sans Variable", sans-serif;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-weight: 800;
+    font-size: 3rem;
+    font-family: "Lato", sans-serif;
+  }
+
+  h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    /* text-decoration: underline; */
+    padding-left: 10%;
+    margin-top: 10%;
+  }
+
+  h1 {
+    margin-left: 5%;
+    font-family: "Lato", sans-serif;
+    margin-top: 10%;
+  }
+
+  .horizontalFloater {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .highlightOne {
+    background-color: #6694cb;
+    border-radius: 5px;
+    font-size: 2.2rem;
+    color: black;
+    font-weight: 600;
+    font-family: "Lato", sans-serif;
+  }
+  .highlightTwo {
+    color: #b0e0e6;
+    font-size: 2rem;
+  }
+
+  .highlightThree {
+    color: #007ba7;
+    font-size: 2rem;
+  }
+
+  .highlightFour {
+    color: #ccccff;
+    font-size: 2rem;
+  }
+
+  .highlightFive {
+    color: #add8e6;
+    font-size: 2rem;
+  }
+
+  .highlightSix {
+    color: #2b4593;
+    font-size: 2rem;
   }
 </style>
