@@ -1,13 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ContactForm from "../components/ContactForm.jsx";
 ---
 
 <Layout title="Contact Us">
   <main>
     <h1>Please fill in this form to get in contact</h1>
-    <form>
-      <input />
-    </form>
+    <ContactForm client:load />
   </main>
 </Layout>
 
