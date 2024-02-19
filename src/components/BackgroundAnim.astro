@@ -1,5 +1,4 @@
 ---
-// import colourScheme from "../scripts/Pallete";
 var BackgroundGradiants = "";
 
 const colourScheme = [
@@ -10,6 +9,8 @@ const colourScheme = [
   "rgba(0, 163, 166, 1)",
 ];
 
+// import colourScheme from "../scripts/Pallete";
+
 for (var j = 0; j < 50; j++) {
   BackgroundGradiants +=
     "radial-gradient(circle at " +
@@ -18,7 +19,7 @@ for (var j = 0; j < 50; j++) {
     Math.floor(Math.random() * 150 - 50).toString() +
     "%, rgba(0,0,0,0) 50%, " +
     colourScheme[Math.floor(Math.random() * 5)] +
-    " 80%),";
+    " 60%),";
 }
 BackgroundGradiants = BackgroundGradiants.substring(
   0,
@@ -52,6 +53,8 @@ const animEnd =
   }
 
   .backgroundItem {
+    width: 100%;
+    min-height: 100%;
     animation-name: BackgroundBlobs;
     animation-duration: 10s;
     animation-iteration-count: infinite;
