@@ -1,0 +1,72 @@
+  p,
+  h1,
+  h4,
+  h5,
+  h6 {
+    font-family: "Work Sans Variable", sans-serif;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-weight: 800;
+    font-size: 3rem;
+    font-family: "Lato", sans-serif;
+  }
+
+  h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    /* text-decoration: underline; */
+    padding-left: 10%;
+    margin-top: 10%;
+  }
+
+  h1 {
+    margin-left: 5%;
+    font-family: "Lato", sans-serif;
+    margin-top: 10%;
+  }
+
+  .horizontalFloater {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 10%;
+  }
+  .highlightOne {
+    background-color: #6694cb;
+    border-radius: 5px;
+    font-size: 2.2rem;
+    color: black;
+    font-weight: 600;
+    font-family: "Lato", sans-serif;
+  }
+  .highlightTwo {
+    color: #b0e0e6;
+    font-size: 2rem;
+  }
+
+  .highlightThree {
+    color: #007ba7;
+    font-size: 2rem;
+  }
+
+  .highlightFour {
+    color: #ccccff;
+    font-size: 2rem;
+  }
+
+  .highlightFive {
+    color: #add8e6;
+    font-size: 2rem;
+  }
+
+  .highlightSix {
+    color: #2b4593;
+    font-size: 2rem;
+  }
