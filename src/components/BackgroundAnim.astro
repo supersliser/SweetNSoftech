@@ -1,15 +1,7 @@
 ---
 var BackgroundGradiants = "";
 
-const colourScheme = [
-  "rgba(235, 64, 52, 1)",
-  "rgba(85, 93, 194, 1)",
-  "rgba(247, 200, 99, 1)",
-  "rgba(252, 38, 252, 1)",
-  "rgba(0, 163, 166, 1)",
-];
-
-// import colourScheme from "../scripts/Pallete";
+import colourScheme from "../scripts/Pallete";
 
 for (var j = 0; j < 50; j++) {
   BackgroundGradiants +=
@@ -18,7 +10,7 @@ for (var j = 0; j < 50; j++) {
     "% " +
     Math.floor(Math.random() * 150 - 50).toString() +
     "%, rgba(0,0,0,0) 50%, " +
-    colourScheme[Math.floor(Math.random() * 5)] +
+    colourScheme[Math.floor(Math.random() * 5)][0] +
     " 60%),";
 }
 BackgroundGradiants = BackgroundGradiants.substring(

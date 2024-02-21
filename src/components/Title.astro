@@ -7,24 +7,18 @@ import "@fontsource/lato/900-italic.css";
 import colourScheme from "../scripts/Pallete";
 ---
 
-<div class="titleContainer"><h1 class="title"><slot /></h1></div>
+<h1 class="title"><slot /></h1>
 
 <style>
-  .titleContainer {
-    width: 60%;
-    padding-top: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
-    margin: 5%;
-    float: right;
-  }
-
   @keyframes colours {
   }
   .title {
+    margin: 5%;
     font-size: 5rem;
-    width: 100%;
+    width: 90%;
+    text-align: center;
     font-family: "Lato", sans-serif;
     color: black;
+    padding-top: 10%;
   }
 </style>

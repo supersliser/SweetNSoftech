@@ -1,0 +1,62 @@
+---
+const { teamMember } = Astro.props;
+
+import colourScheme from "../scripts/Pallete";
+import "@fontsource-variable/work-sans";
+
+const marian = colourScheme[2][2];
+const powder = colourScheme[0][2];
+const peri = colourScheme[1][2];
+const light = colourScheme[3][2];
+---
+
+<table>
+  <tr>
+    <td class="imageContainer"
+      ><img
+        src={teamMember[0]}
+        alt="hi"
+        style={{ width: "300px", height: "300px" }}
+      /></td
+    >
+  </tr>
+  <tr>
+    <td class="nameContainer">{teamMember[1]}</td>
+  </tr>
+  <tr>
+    <td class="quoteContainer">{teamMember[2]}</td>
+  </tr>
+</table>
+
+<style define:vars={{ marian, powder, peri, light }}>
+  table,
+  th,
+  td {
+    border-width: 1px;
+    border-color: var(--marian);
+  }
+  table {
+    border-radius: 5px;
+    color: black;
+    font-family: "Work Sans Variable", sans-serif;
+    max-width: 25%;
+  }
+  td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .imageContainer {
+    background-color: var(--powder);
+  }
+
+  .nameContainer {
+    background-color: var(--peri);
+    min-height: 1rem;
+  }
+
+  .quoteContainer {
+    background-color: var(--light);
+    min-height: 3rem;
+  }
+</style>

@@ -2,7 +2,7 @@
 import colourScheme from "../scripts/Pallete";
 import "@fontsource-variable/lexend";
 
-const { link, bold, text, dark } = Astro.props;
+const { link, bold, dark } = Astro.props;
 var boldText = "500";
 if (bold) {
   boldText = "900";
@@ -15,7 +15,7 @@ if (dark == null || !dark) {
 }
 ---
 
-<a class="linkButton" href={link}>{text}</a>
+<a class="linkButton" href={link}><slot /></a>
 
 <style define:vars={{ boldText, colour }}>
   .linkButton {

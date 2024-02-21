@@ -8,18 +8,33 @@ import LinkButton from "../components/LinkButton.astro";
     <p class="titleItem">Pages</p>
     {
       Pages[0].map((page) => {
-        return <LinkButton dark={true} link={page[1]} text={page[0]} />;
+        return (
+          <LinkButton dark={true} link={page[1]}>
+            {page[0]}
+          </LinkButton>
+        );
       })
     }
     {
       Pages[1].map((page) => {
-        return <LinkButton dark={true} link={page[1]} text={page[0]} />;
+        return (
+          <LinkButton dark={true} link={page[1]}>
+            {page[0]}
+          </LinkButton>
+        );
       })
     }
   </ul>
   <div class="listContainer">
-    <p class="titleItem">Sample title</p>
-    <p>we could put some extra stuff here probably</p>
+    <p>
+      Business Inquires: <LinkButton
+        dark={true}
+        link="mailto:pouncevr@gmail.com"
+      >
+        pouncevr@gmail.com
+      </LinkButton>
+    </p>
+    <p>©SweetNSoftech</p>
   </div>
 </div>
 
@@ -29,13 +44,12 @@ import LinkButton from "../components/LinkButton.astro";
     color: white;
     width: 80%;
     padding: 10%;
-    /* margin-top: -3%; */
     display: flex;
     align-items: center;
     justify-content: space-around;
     z-index: -50;
     flex-direction: row;
-    height: max-content;
+    height: min-content;
   }
   p,
   h1,
@@ -51,6 +65,10 @@ import LinkButton from "../components/LinkButton.astro";
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+  }
+
+  p {
+    text-align: center;
   }
 
   .titleItem {

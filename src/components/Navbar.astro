@@ -11,9 +11,13 @@ import Pages from "../scripts/PageLayout.js";
         return (
           <div class="itemContainer">
             {page[0] != currentPage ? (
-              <LinkButton bold={false} link={page[1]} text={page[0]} />
+              <LinkButton bold={false} link={page[1]}>
+                {page[0]}
+              </LinkButton>
             ) : (
-              <LinkButton bold={true} link={page[1]} text={page[0]} />
+              <LinkButton bold={true} link={page[1]}>
+                {page[0]}
+              </LinkButton>
             )}
           </div>
         );
@@ -26,9 +30,13 @@ import Pages from "../scripts/PageLayout.js";
         return (
           <div class="itemContainer">
             {page[0] != currentPage ? (
-              <LinkButton bold={false} link={page[1]} text={page[0]} />
+              <LinkButton bold={false} link={page[1]}>
+                {page[0]}
+              </LinkButton>
             ) : (
-              <LinkButton bold={true} link={page[1]} text={page[0]} />
+              <LinkButton bold={true} link={page[1]}>
+                {page[0]}
+              </LinkButton>
             )}
           </div>
         );

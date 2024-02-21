@@ -4,6 +4,9 @@ const Pages = [
     ["Meet the Team", "/team"],
     ["About Us", "/about"],
   ],
-  [["Contact Us", "/contact"]],
+  [
+    ["Feedback", "/contact"],
+    ["Join the Team", "/join"],
+  ],
 ];
 export default Pages;
