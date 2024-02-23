@@ -1,0 +1,29 @@
+---
+import Title from "../components/Title.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Feedback">
+  <main>
+    <Title>Have any feedback?</Title>
+    <h1>Use the form below to let us know your thoughts</h1>
+    <div id="ff-compose"></div>
+    <script
+      async
+      defer
+      src="https://formfacade.com/include/111672363110275691501/form/1FAIpQLSeWpSSOfjehuQBYcDcJlgEweXPHU0hfmOXpGJz5lLZfKad0Kg/classic.js?div=ff-compose"
+    ></script>
+  </main>
+</Layout>
+
+<style>
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Work Sans Variable", sans-serif;
+  }
+</style>

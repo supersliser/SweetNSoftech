@@ -1,0 +1,77 @@
+---
+import Pages from "../scripts/PageLayout";
+import LinkButton from "../components/LinkButton.astro";
+---
+
+<div class="bottomAreaContainer">
+  <ul class="listContainer">
+    <p class="titleItem">Pages</p>
+    {
+      Pages[0].map((page) => {
+        return (
+          <LinkButton dark={true} link={page[1]}>
+            {page[0]}
+          </LinkButton>
+        );
+      })
+    }
+    {
+      Pages[1].map((page) => {
+        return (
+          <LinkButton dark={true} link={page[1]}>
+            {page[0]}
+          </LinkButton>
+        );
+      })
+    }
+  </ul>
+  <div class="listContainer">
+    <p>
+      Business Inquires: <LinkButton
+        dark={true}
+        link="mailto:pouncevr@gmail.com"
+      >
+        pouncevr@gmail.com
+      </LinkButton>
+    </p>
+    <p>©SweetNSoftech</p>
+  </div>
+</div>
+
+<style>
+  .bottomAreaContainer {
+    background-color: rgb(24, 24, 24);
+    color: white;
+    width: 80%;
+    padding: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: -50;
+    flex-direction: row;
+    height: min-content;
+  }
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Work Sans Variable", sans-serif;
+  }
+  .listContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .titleItem {
+    font-weight: 600;
+  }
+</style>

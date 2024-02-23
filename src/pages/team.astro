@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/main.css";
+import Title from "../components/Title.astro";
+import TeamMemberBox from "../components/TeamMemberBox.astro";
+
+const teamMembers = [
+  [
+    "/defaultPicture.png",
+    "The Creator",
+    "Too busy inventing to write one of these",
+  ],
+  [
+    "/defaultPicture.png",
+    "The Manager",
+    "I oversee Pounce's social media presence.",
+  ],
+];
+---
+
+<Layout title="Meet the Team">
+  <Title>Meet the Team</Title>
+  <div class="floater">
+    {
+      teamMembers.map((member) => {
+        return <TeamMemberBox teamMember={member} />;
+      })
+    }
+  </div>
+</Layout>
+
+<style>
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Work Sans Variable", sans-serif;
+  }
+
+  .floater {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: min-content;
+    width: 80%;
+    margin-left: 10%;
+  }
+</style>

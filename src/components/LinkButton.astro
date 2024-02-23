@@ -1,40 +1,37 @@
 ---
-const {link, bold} = Astro.props
-var boldText = "normal"
+import colourScheme from "../scripts/Pallete";
+import "@fontsource-variable/lexend";
+
+const { link, bold, dark } = Astro.props;
+var boldText = "500";
 if (bold) {
-    boldText = "bold"
+  boldText = "900";
+}
+var colour;
+if (dark == null || !dark) {
+  colour = "#000000";
+} else {
+  colour = colourScheme[0][0];
 }
 ---
 
-<button onclick={link}><slot /></button>
+<a class="linkButton" href={link}><slot /></a>
 
-<style define:vars={{ boldText }}>
-    @keyframes Hover {
-        0% {
-            background-color: transparent;
-        }
+<style define:vars={{ boldText, colour }}>
+  .linkButton {
+    color: var(--colour);
+    font-family: "Lexend Variable", sans-serif;
+    font-weight: var(--boldText);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 1rem;
+    border-width: 0;
+    text-decoration: none;
+  }
 
-        100% {
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-    }
-
-    .linkButton  {
-        color: black;
-        font-weight: var(--boldText);
-        padding: 10px;
-        border-radius: 5px;
-        background-color: transparent;
-        font-size: 1rem;
-        animation-name: hover;
-        animation-duration: 1s;
-        animation-direction: reverse;
-    }
-
-    .linkButton:hover {
-        animation-name: hover;
-        animation-duration: 1s;
-    }
-
-
+  .linkButton:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 17px 32px -17px #000000;
+  }
 </style>

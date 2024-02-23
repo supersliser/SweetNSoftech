@@ -1,0 +1,62 @@
+---
+var BackgroundGradiants = "";
+
+import colourScheme from "../scripts/Pallete";
+
+for (var j = 0; j < 50; j++) {
+  BackgroundGradiants +=
+    "radial-gradient(circle at " +
+    Math.floor(Math.random() * 150 - 50).toString() +
+    "% " +
+    Math.floor(Math.random() * 150 - 50).toString() +
+    "%, rgba(0,0,0,0) 50%, " +
+    colourScheme[Math.floor(Math.random() * 5)][0] +
+    " 60%),";
+}
+BackgroundGradiants = BackgroundGradiants.substring(
+  0,
+  BackgroundGradiants.length - 1
+);
+
+const animStart =
+  Math.floor(Math.random() * 100).toString() +
+  "% " +
+  Math.floor(Math.random() * 50 + 25).toString() +
+  "%";
+const animEnd =
+  Math.floor(Math.random() * 100).toString() +
+  "% " +
+  Math.floor(Math.random() * 50 + 25).toString() +
+  "%";
+---
+
+<div class="backgroundItem">
+  <slot />
+</div>
+
+<style define:vars={{ BackgroundGradiants, animStart, animEnd }}>
+  @keyframes BackgroundBlobs {
+    0% {
+      background-position: var(--animStart);
+    }
+    100% {
+      background-position: var(--animEnd);
+    }
+  }
+
+  .backgroundItem {
+    width: 100%;
+    min-height: 100%;
+    animation-name: BackgroundBlobs;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    background: var(--BackgroundGradiants);
+    background-color: white;
+    /* background-color: white; */
+    background-size: 150vw 150vh;
+    background-attachment: fixed;
+    padding-bottom: 5%;
+  }
+</style>
